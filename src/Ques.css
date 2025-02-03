@@ -13,22 +13,24 @@
     justify-content: center;
     height: 100vh;
     position: relative;
+    flex-direction: column;
 }
 
-/* Quiz box */
-.quiz-box {
+/* Question box */
+.ques-box {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 1000px;
-    height: 400px;
+    width: 1500px; /* Decreased width */
+    height: 200px;
     position: relative;
+    margin-top: -100px; /* Shift upwards */
 }
 
 /* Timer */
-.timer {
+.Timer {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -37,39 +39,66 @@
     color: #333;
 }
 
-/* Question */
+/* Question text */
 .ques-box h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5px;
+    position: absolute;
 }
 
-/* Description text */
+/* Question content */
 .ques-box p {
     color: #555;
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 70px;
+    position: relative;
+}
+
+/* Container for options */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 50px; /* Space between options */
+    width: 1000px; /* Decreased width of options */
+    margin-top: 80px; /* Space between question and options */
+}
+
+/* Option buttons */
+.option-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+/* Option button hover effect */
+.option-btn:hover {
+    background-color: #007bff;
+    color: white;
 }
 
 /* Next button */
 .next-btn {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;
+    right: 50px;
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     transition: background 0.3s ease-in-out;
 }
 
-/* Button hover effects */
+/* Next button hover effects */
 .next-btn:hover {
     background-color: #218838;
 }
